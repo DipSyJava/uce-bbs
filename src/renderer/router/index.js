@@ -26,6 +26,11 @@ export default new Router({
       component: require('@/components/fatie').default
     },
     {
+      path: '/subject',
+      name: 'subject-page',
+      component: require('@/components/subject').default
+    },
+    {
       path: '*',
       redirect: '/'
     }

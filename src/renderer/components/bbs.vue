@@ -1,13 +1,15 @@
 <template>
     <div class="app-container">
-        <el-col class="tabs-wrap" :lg="18">
+        <el-col class="tabs-wrap" :lg="16">
             <el-tabs type="border-card">
                 <el-tab-pane label="最新">
                     <ul>
                         <li v-for="(item, index) in subjects" :key="index">
                             <div class="subject-item">
                                 <div class="subject-title-wrap">
-                                    <div class="subject-title">{{item.title}}</div>
+                                    <router-link to="/subject">
+                                        <div class="subject-title">{{item.title}}</div>
+                                    </router-link>
                                 </div>
                                 <div class="subject-detail-wrap">
                                     <span class="subject-founder subject-detail">{{item.founder}}</span>
@@ -23,9 +25,11 @@
                 </el-tab-pane>
             </el-tabs>
         </el-col>
-        <el-col class="info-wrap" :lg="5">
+        <el-col class="info-wrap" :lg="6">
             <div class="subject-begin">
-                <el-button class="subject-begin-btn" type="primary">我要发帖</el-button>
+                <router-link to="/fatie">
+                    <el-button class="subject-begin-btn" type="primary">我要发帖</el-button>
+                </router-link>
             </div>
             <div class="user-info">
                 这里是User信息
@@ -97,6 +101,10 @@
                 }]
             }
         },
+        mounted(){
+            let id = this.$route.query.id
+            console.log(id);
+        }
     }
 </script>
 <style>
