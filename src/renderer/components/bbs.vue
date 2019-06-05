@@ -1,6 +1,6 @@
 <template>
     <div class="app-container">
-        <el-col class="tabs-wrap" :lg="16">
+        <el-col class="tabs-wrap" :sm="16" :md="18">
             <el-tabs type="border-card">
                 <el-tab-pane label="最新">
                     <ul>
@@ -25,7 +25,7 @@
                 </el-tab-pane>
             </el-tabs>
         </el-col>
-        <el-col class="info-wrap" :lg="6">
+        <el-col class="info-wrap" :sm="8" :md="6">
             <div class="subject-begin">
                 <router-link to="/fatie">
                     <el-button class="subject-begin-btn" type="primary">我要发帖</el-button>
