@@ -21,6 +21,14 @@ Vue.config.productionTip = false
 
 Vue.use(ElementUI)
 
+router.beforeEach(function(to,from,next){
+  // console.log("to:"+to);//object
+  // console.log("from"+from);//object
+  // console.log("next"+next);//function
+  next();
+});
+
+
 /* eslint-disable no-new */
 new Vue({
   components: { App },

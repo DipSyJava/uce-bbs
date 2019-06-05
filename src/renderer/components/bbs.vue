@@ -7,7 +7,7 @@
                         <li v-for="(item, index) in subjects" :key="index">
                             <div class="subject-item">
                                 <div class="subject-title-wrap">
-                                    <router-link to="/subject">
+                                    <router-link :to="{path:'/subject',query:{id:item.id}}">
                                         <div class="subject-title">{{item.title}}</div>
                                     </router-link>
                                 </div>
@@ -43,6 +43,7 @@
         data() {
             return {
                 subjects: [{
+                    id: 1,
                     title: '六一儿童节快乐',
                     founder: "花前月下",
                     createTime: '3天前',
@@ -51,6 +52,7 @@
                     lookTimes: 12,
                     reply: 23,
                 }, {
+                    id: 2,
                     title: '技术分享帖',
                     founder: "花前月下",
                     createTime: '2019-03-22',
@@ -59,6 +61,7 @@
                     lookTimes: 12,
                     reply: 106,
                 }, {
+                    id: 3,
                     title: '吐槽专帖',
                     founder: "花前月下",
                     createTime: '9天前',
@@ -67,6 +70,7 @@
                     lookTimes: 12,
                     reply: 120,
                 }, {
+                    id: 4,
                     title: '对于***你有什么想说的吗？',
                     founder: "花前月下",
                     createTime: '12天前',
@@ -75,6 +79,7 @@
                     lookTimes: 12,
                     reply: 10,
                 }, {
+                    id: 5,
                     title: '这一顿12块钱，你们有什么想说的吗',
                     founder: "花前月下",
                     createTime: '1小时前',
@@ -83,6 +88,7 @@
                     lookTimes: 12,
                     reply: 35,
                 }, {
+                    id: 6,
                     title: 'I Love You',
                     founder: "花前月下",
                     createTime: '1天前',
@@ -91,6 +97,7 @@
                     lookTimes: 12,
                     reply: 8,
                 }, {
+                    id: 7,
                     title: '有什么好的电视剧推荐一下',
                     founder: "花前月下",
                     createTime: '3分钟前',
@@ -102,8 +109,21 @@
             }
         },
         mounted(){
-            let id = this.$route.query.id
-            console.log(id);
+            let testValue = this.$route.query.testValue
+            console.log(testValue);
+        },
+        watch: {
+            '$route':{
+                handler(newValue,oldValue){
+                    // console.log(newValue);
+                    // console.log(123)
+                }
+            }
+        },
+        beforeRouteUpdate(to,from,next){
+            console.log(to);
+            console.log(from)
+            next();
         }
     }
 </script>

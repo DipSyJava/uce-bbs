@@ -1,8 +1,5 @@
 <template>
     <div class="app-container" style="padding:25px;">
-        <router-link to="/bbs?id=11001">
-            <el-link type="primary">返回</el-link>
-        </router-link>
         <el-row>
             <el-col :span="16">
                 <el-card class="container-card">
@@ -63,6 +60,24 @@
                 subjectContent: "<h2>这里是帖子主体内容</h2>"
             }
         },
+        mounted() {
+            console.log(this.$route.query.id);
+        },
+        watch: {
+            '$route': {
+                handler(newValue,oldValue){
+                    console.log(newValue)
+                    console.log(oldValue)
+                },
+                deep: true
+            }
+        },
+        beforeRouteEnter(to, from, next) {
+            next((vm) => {
+                // console.log(this);
+                // console.log(vm.$route.query.id);
+            })
+        }
     }
 </script>
 <style>
