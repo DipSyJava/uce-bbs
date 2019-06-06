@@ -1,6 +1,11 @@
 <template>
     <div class="app-container" style="padding:25px;">
         <el-row>
+            <el-col>
+                <router-link to="go(-1)"><el-link type="primary">返回</el-link></router-link>
+            </el-col>
+        </el-row>
+        <el-row>
             <el-col :span="16">
                 <el-card class="container-card">
                     <el-row>

@@ -26,7 +26,7 @@ export default new Router({
       component: require('@/components/fatie').default
     },
     {
-      path: '/subject',
+      path: '/subject/:id',
       name: 'subject-page',
       component: require('@/components/subject').default
     },

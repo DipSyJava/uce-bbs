@@ -7,7 +7,7 @@
                         <li v-for="(item, index) in subjects" :key="index">
                             <div class="subject-item">
                                 <div class="subject-title-wrap">
-                                    <router-link :to="{path:'/subject',query:{id:item.id}}">
+                                    <router-link :to="{path:'/subject/'+item.id}">
                                         <div class="subject-title">{{item.title}}</div>
                                     </router-link>
                                 </div>
