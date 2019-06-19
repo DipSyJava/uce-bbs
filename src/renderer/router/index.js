@@ -21,6 +21,23 @@ export default new Router({
       component: require('@/components/bbs').default
     },
     {
+      path: '/circle',
+      name: 'circle-page',
+      component: require('@/components/circle').default,
+      children: [
+        {
+          path: '/circle/ownFollow',
+          name: 'own-follow',
+          component: require('@/components/circleFollow').default
+        },
+        {
+          path: '/circle/activeTest1',
+          name: 'circle-other',
+          component: require('@/components/circleFollow').default
+        }
+      ]
+    },
+    {
       path: '/fatie',
       name: 'fatie-page',
       component: require('@/components/fatie').default

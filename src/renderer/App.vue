@@ -5,11 +5,11 @@
         active-text-color="#ffd04b" class="app-nav" router>
         <el-menu-item index="1">菜单</el-menu-item>
         <el-menu-item index="/bbs?testValue=123">论坛</el-menu-item>
-        <el-menu-item index="3">圈子</el-menu-item>
+        <el-menu-item index="/circle?textValue=token01">圈子</el-menu-item>
       </el-menu>
     </header>
     <div class="app-main">
-      <router-view></router-view>
+      <router-view></router-view> 
     </div>
   </div>
 </template>
