@@ -22,9 +22,9 @@ Vue.config.productionTip = false
 Vue.use(ElementUI)
 
 router.beforeEach(function(to,from,next){
-  // console.log("to:"+to);//object
-  // console.log("from"+from);//object
-  // console.log("next"+next);//function
+  console.log("to:", to);//object
+  console.log("from", from);//object
+  console.log("next", next);//function
   next();
 });
 

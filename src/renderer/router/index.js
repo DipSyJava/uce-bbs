@@ -31,9 +31,14 @@ export default new Router({
           component: require('@/components/circleFollow').default
         },
         {
-          path: '/circle/activeTest1',
+          path: '/circle/funnyBitchs',
           name: 'circle-other',
-          component: require('@/components/circleFollow').default
+          component: require('@/components/circleBitchs').default
+        },
+        {
+          path: '/circle/*',
+          name: 'circle-other',
+          component: require('@/components/circleBitchs').default
         }
       ]
     },
