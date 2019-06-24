@@ -7,6 +7,9 @@ import store from './store'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
+import utils from './utils'
+Vue.prototype.common = utils
+
 import mavonEditor from 'mavon-editor'
 import 'mavon-editor/dist/css/index.css'
 
@@ -34,5 +37,6 @@ new Vue({
   components: { App },
   router,
   store,
+	utils,
   template: '<App/>'
 }).$mount('#app')

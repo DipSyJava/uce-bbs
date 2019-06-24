@@ -20,7 +20,7 @@
                 </template>
                 <el-menu-item-group>
                   <template slot="title"  v-for="itemChild in item.cateChild">
-                    <el-menu-item :index="itemChild.index + '?' + itemChild.id" :key="item.id + '-' + itemChild.id">{{itemChild.cateName}}</el-menu-item>
+                    <el-menu-item :index="itemChild.index + '?' + item.id + '-' + itemChild.id" :key="item.id + '-' + itemChild.id">{{itemChild.cateName}}</el-menu-item>
                   </template>
                 </el-menu-item-group>
               </el-submenu>
@@ -57,7 +57,7 @@
               id: 1,
               index: "1",
               cateName: "傻逼",
-              cateChild: [{id: "1",index: '/circle/funnyBitchs',cateName: "傻1"},{id: 2,index: '/circle/funnyBitchs',cateName: "傻2"},{id: 3,index: '/circle/funnyBitchs',cateName: "傻3"}]
+              cateChild: [{id: 1,index: '/circle/funnyBitchs',cateName: "傻1"},{id: 2,index: '/circle/funnyBitchs',cateName: "傻2"}]
             },
             {
               id: 2,
@@ -74,7 +74,7 @@
               id: 4,
               index: "4",
               cateName: "NOS",
-              cateChild: [{id: 1,index: '/circle/funnyBitchs',cateName: "智1"},{id: 2,index: '/circle/funnyBitchs',cateName: "智2"},{id: 3,index: '/circle/funnyBitchs',cateName: "智3"}]
+              cateChild: [{id: 1,index: '/circle/funnyBitchs',cateName: "智1"}]
             },
             {
               id: 5,
@@ -86,7 +86,7 @@
               id: 6,
               index: "6",
               cateName: "SOC",
-              cateChild: [{id: 1,index: '/circle/funnyBitchs',cateName: "智1"},{id: 2,index: '/circle/funnyBitchs',cateName: "智2"},{id: 3,index: '/circle/funnyBitchs',cateName: "智3"}]
+              cateChild: [{id: 1,index: '/circle/funnyBitchs',cateName: "智1"},{id: 3,index: '/circle/funnyBitchs',cateName: "智3"}]
             },
             {
               id: 7,
