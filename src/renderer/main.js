@@ -8,7 +8,7 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
 import utils from './utils'
-Vue.prototype.common = utils
+Vue.prototype.utils = utils
 
 import mavonEditor from 'mavon-editor'
 import 'mavon-editor/dist/css/index.css'
